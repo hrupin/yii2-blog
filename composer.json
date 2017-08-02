@@ -1,0 +1,25 @@
+{
+    "name": "hrupin/yii2-blog",
+    "description": "Yii2 Blog for other application",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hrupin Aleksandr",
+            "email": "hrupin.work@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "mihaildev/yii2-ckeditor": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "hrupin\\blog\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "hrupin\\blog\\Bootstrap"
+    }
+}
