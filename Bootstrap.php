@@ -1,7 +1,9 @@
 <?php
 namespace hrupin\blog;
 
+use Yii;
 use yii\base\BootstrapInterface;
+use yii\i18n\PhpMessageSource;
 
 /**
  * Blogs module bootstrap class.
@@ -17,6 +19,30 @@ class Bootstrap implements BootstrapInterface
         'SeoBlog'          => 'hrupin\blog\models\SeoBlog',
         'AuthorBlog'       => 'hrupin\blog\models\AuthorBlog',
     ];
+    
+    public function bootstrap($app)
+    {
+        /** @var Module $module */
+        /** @var \yii\db\ActiveRecord $modelName */
+        if ($app->hasModule('blog') && ($module = $app->getModule('blog')) instanceof Module) {
+            $this->_modelMap = array_merge($this->_modelMap, $module->modelMap);
+            foreach ($this->_modelMap as $name => $definition) {
+                $class = "hrupin\\blog\\models\\" . $name;
+                Yii::$container->set($class, $definition);
+                $modelName = is_array($definition) ? $definition['class'] : $definition;
+                $module->modelMap[$name] = $modelName;
+            }
+            if (!isset($app->get('i18n')->translations['blog*'])) {
+                $app->get('i18n')->translations['blog*'] = [
+                    'class' => PhpMessageSource::className(),
+                    'basePath' => __DIR__ . '/messages',
+                    'sourceLanguage' => 'en-US'
+                ];
+            }
+            Yii::$container->set('dektrium\user\Mailer', $module->mailer);
+            $module->debug = $this->ensureCorrectDebugSetting();
+        }
+    }
     
     public function ensureCorrectDebugSetting()
     {
