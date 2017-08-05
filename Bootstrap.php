@@ -2,8 +2,8 @@
 namespace hrupin\blog;
 
 use Yii;
-use yii\base\BootstrapInterface;
 use yii\i18n\PhpMessageSource;
+use yii\base\BootstrapInterface;
 
 /**
  * Blogs module bootstrap class.
