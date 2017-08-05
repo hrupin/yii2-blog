@@ -19,8 +19,8 @@ class m170805_202411_create_table_blogAuthor extends Migration
             'name' => Schema::TYPE_STRING . '(255) NOT NULL',
             'avatar' => Schema::TYPE_STRING . '(255) NOT NULL',
             'description' => Schema::TYPE_STRING . '(500) NULL',
-            'about' => Schema::TYPE_STRING . '(5000) NULL',
-            'contact' => Schema::TYPE_STRING . '(1000) NULL',
+            'about' => Schema::TYPE_TEXT . '(5000) NULL',
+            'contact' => Schema::TYPE_TEXT . '(1000) NULL',
             'dateCreated' => Schema::TYPE_INTEGER,
             'dateUpdated' => Schema::TYPE_INTEGER,
         ], $tableOptions);
