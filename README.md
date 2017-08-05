@@ -1,6 +1,6 @@
 # yii2-blog
 
-install
+#### install
 ------------
 
 ```
