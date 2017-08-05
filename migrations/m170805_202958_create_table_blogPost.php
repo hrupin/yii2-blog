@@ -13,9 +13,9 @@ class m170805_202958_create_table_blogPost extends Migration
         }
         $this->createTable('{{%blogPost}}', [
             'id' => Schema::TYPE_PK,
-            'id_post' => Schema::TYPE_INTEGER,
-            'id_category' => Schema::TYPE_INTEGER,
-            'id_author' => Schema::TYPE_INTEGER,
+            'id_post' => Schema::TYPE_INTEGER . ' NOT NULL',
+            'id_category' => Schema::TYPE_INTEGER . ' NOT NULL',
+            'id_author' => Schema::TYPE_INTEGER . ' NOT NULL',
             'id_tag' => Schema::TYPE_STRING . '(100)',
             'id_seo' => Schema::TYPE_INTEGER . '(100)',
             'lang' => Schema::TYPE_STRING . '(6) NOT NULL',
@@ -25,8 +25,8 @@ class m170805_202958_create_table_blogPost extends Migration
             'thumbnail' => Schema::TYPE_STRING . '(255) NULL',
             'img' => Schema::TYPE_STRING . '(255) NULL',
             'permissionToComment' => Schema::TYPE_BOOLEAN,
-            'dateCreated' => Schema::TYPE_INTEGER,
-            'dateUpdated' => Schema::TYPE_INTEGER,
+            'dateCreated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
+            'dateUpdated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
         ], $tableOptions);
     }
 
