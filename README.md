@@ -11,6 +11,10 @@ composer
 ```
 composer require hrupin/yii2-blog
 ```
+or in **composer.json**
+```
+"hrupin/yii2-blog": "*"
+```
 
 configure **common/config/main.php**
 
