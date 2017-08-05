@@ -24,8 +24,8 @@ class m170805_203925_create_table_blogComment extends Migration
             'contact' => Schema::TYPE_STRING . '(255) NULL',
             'avatar' => Schema::TYPE_STRING . '(255) NOT NULL',
             'content' => Schema::TYPE_TEXT . '(3000) NOT NULL',
-            'dateCreated' => Schema::TYPE_INTEGER,
-            'dateUpdated' => Schema::TYPE_INTEGER,
+            'dateCreated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
+            'dateUpdated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
         ], $tableOptions);
     }
 
