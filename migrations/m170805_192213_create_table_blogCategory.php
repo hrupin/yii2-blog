@@ -13,16 +13,16 @@ class m170805_192213_create_table_blogCategory extends Migration
         }
         $this->createTable('{{%blogCategory}}', [
             'id' => Schema::TYPE_PK,
-            'id_category' => Schema::TYPE_INTEGER,
-            'id_seo' => Schema::TYPE_INTEGER,
-            'id_parent' => Schema::TYPE_INTEGER,
+            'id_category' => Schema::TYPE_INTEGER . ' NOT NULL',
+            'id_seo' => Schema::TYPE_INTEGER . ' NULL',
+            'id_parent' => Schema::TYPE_INTEGER . ' NULL',
             'lang' => Schema::TYPE_STRING . '(6) NOT NULL',
             'name' => Schema::TYPE_STRING . '(500) NOT NULL',
             'description' => Schema::TYPE_TEXT . '(2000) NULL',
             'img' => Schema::TYPE_STRING . '(500) NULL',
             'sort' => Schema::TYPE_INTEGER . '(5) NOT NULL',
-            'dateCreated' => Schema::TYPE_INTEGER,
-            'dateUpdated' => Schema::TYPE_INTEGER,
+            'dateCreated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
+            'dateUpdated' => Schema::TYPE_INTEGER . '(12) NOT NULL',
         ], $tableOptions);
     }
 
