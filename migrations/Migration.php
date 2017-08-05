@@ -1,30 +1,16 @@
 <?php
-/*
- * This file is part of the Dektrium project.
- *
- * (c) Dektrium project <http://github.com/dektrium/>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace hrupin\blog\migrations;
+
 use Yii;
-/**
- * @author Dmitry Erofeev <dmeroff@gmail.com>
- */
+
 class Migration extends \yii\db\Migration
 {
-    /**
-     * @var string
-     */
+    
     protected $tableOptions;
     protected $restrict = 'RESTRICT';
     protected $cascade = 'CASCADE';
     protected $dbType;
     
-    /**
-     * @inheritdoc
-     */
     public function init()
     {
         parent::init();
