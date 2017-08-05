@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m170805_200742_create_table_tagBlog extends Migration
+class m170805_200742_create_table_blogTag extends Migration
 {
     public function safeUp()
     {
@@ -11,7 +11,7 @@ class m170805_200742_create_table_tagBlog extends Migration
         if ($this->db->driverName === 'mysql') {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
         }
-        $this->createTable('{{%tagBlog}}', [
+        $this->createTable('{{%blogTag}}', [
             'id' => Schema::TYPE_PK,
             'id_tag' => Schema::TYPE_INTEGER,
             'lang' => Schema::TYPE_STRING . '(6) NOT NULL',
@@ -26,6 +26,6 @@ class m170805_200742_create_table_tagBlog extends Migration
 
     public function safeDown()
     {
-        $this->dropTable('{{%tagBlog}}');
+        $this->dropTable('{{%blogTag}}');
     }
 }
