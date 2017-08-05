@@ -17,7 +17,7 @@ class m170805_192213_create_table_blogCategory extends Migration
             'id_seo' => Schema::TYPE_INTEGER . ' NULL',
             'id_parent' => Schema::TYPE_INTEGER . ' NULL',
             'lang' => Schema::TYPE_STRING . '(6) NOT NULL',
-            'name' => Schema::TYPE_STRING . '(500) NOT NULL',
+            'title' => Schema::TYPE_STRING . '(500) NOT NULL',
             'description' => Schema::TYPE_TEXT . '(2000) NULL',
             'img' => Schema::TYPE_STRING . '(500) NULL',
             'sort' => Schema::TYPE_INTEGER . '(5) NOT NULL',
