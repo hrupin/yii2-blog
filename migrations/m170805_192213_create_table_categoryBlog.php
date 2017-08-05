@@ -15,7 +15,6 @@ class m170805_192213_create_table_categoryBlog extends Migration
             'id' => Schema::TYPE_PK,
             'id_category' => Schema::TYPE_INTEGER,
             'id_seo' => Schema::TYPE_INTEGER,
-            'id_tag' => Schema::TYPE_INTEGER,
             'id_parent' => Schema::TYPE_INTEGER,
             'lang' => Schema::TYPE_STRING . '(6) NOT NULL',
             'name' => Schema::TYPE_STRING . '(500) NOT NULL',
