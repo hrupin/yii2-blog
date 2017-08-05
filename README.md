@@ -4,9 +4,9 @@
 
 - For personal use it is not recommend to install. No support and never will.
 
-### install
+## install
 
-composer
+### composer
 
 ```
 composer require hrupin/yii2-blog
@@ -16,7 +16,9 @@ or in **composer.json**
 "hrupin/yii2-blog": "*"
 ```
 
-configure **common/config/main.php**
+### configure
+
+in **common/config/main.php**
 
 ```
 'modules' => [
@@ -26,7 +28,7 @@ configure **common/config/main.php**
     ],
 ```
 
-migrate
+### migrate
 
 ```
  php yii migrate/up --migrationPath=@vendor/hrupin/yii2-blog/migrations
