@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m170805_192213_create_table_categoryBlog extends Migration
+class m170805_192213_create_table_blogCategory extends Migration
 {
     public function safeUp()
     {
@@ -11,7 +11,7 @@ class m170805_192213_create_table_categoryBlog extends Migration
         if ($this->db->driverName === 'mysql') {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
         }
-        $this->createTable('{{%categoryBlog}}', [
+        $this->createTable('{{%blogCategory}}', [
             'id' => Schema::TYPE_PK,
             'id_category' => Schema::TYPE_INTEGER,
             'id_seo' => Schema::TYPE_INTEGER,
@@ -28,6 +28,6 @@ class m170805_192213_create_table_categoryBlog extends Migration
 
     public function safeDown()
     {
-        $this->dropTable('{{%categoryBlog}}');
+        $this->dropTable('{{%blogCategory}}');
     }
 }
