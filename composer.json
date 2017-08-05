@@ -1,6 +1,6 @@
 {
     "name": "hrupin/yii2-blog",
-    "description": "Yii2 Blog for other application",
+    "description": "Yii2 Blog for other application YII2",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "MIT",
