@@ -1,7 +1,6 @@
 # yii2-blog
 
-#### install
-------------
+### install
 
 ```
 composer require hrupin/yii2-blog
