@@ -39,7 +39,7 @@ class Bootstrap implements BootstrapInterface
                     'sourceLanguage' => 'en-US'
                 ];
             }
-            Yii::$container->set('dektrium\user\Mailer', $module->mailer);
+            Yii::$container->set('hrupin\blog\Mailer', $module->mailer);
             $module->debug = $this->ensureCorrectDebugSetting();
         }
     }
