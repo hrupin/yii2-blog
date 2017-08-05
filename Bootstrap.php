@@ -15,6 +15,23 @@ class Bootstrap implements BootstrapInterface
         'CommentBlog'      => 'hrupin\blog\models\CommentBlog',
         'TagBlog'          => 'hrupin\blog\models\TagBlog',
         'SeoBlog'          => 'hrupin\blog\models\SeoBlog',
-        'AuthorBlog'          => 'hrupin\blog\models\AuthorBlog',
+        'AuthorBlog'       => 'hrupin\blog\models\AuthorBlog',
     ];
+    
+    public function ensureCorrectDebugSetting()
+    {
+        if (!defined('YII_DEBUG')) {
+            return false;
+        }
+        if (!defined('YII_ENV')) {
+            return false;
+        }
+        if (defined('YII_ENV') && YII_ENV !== 'dev') {
+            return false;
+        }
+        if (defined('YII_DEBUG') && YII_DEBUG !== true) {
+            return false;
+        }
+        return Yii::$app->getModule('blog')->debug;
+    }
 }
