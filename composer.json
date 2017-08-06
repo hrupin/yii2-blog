@@ -23,6 +23,6 @@
         }
     },
     "extra": {
-        "bootstrap": "hrupin\\blog\\Bootstrap",
+        "bootstrap": "hrupin\\blog\\Bootstrap"
     }
 }
