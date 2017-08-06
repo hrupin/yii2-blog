@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace hrupin\blog\models;
 
 /**
  * This is the ActiveQuery class for [[\app\models\BlogCategory]].

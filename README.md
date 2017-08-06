@@ -28,6 +28,26 @@ in **common/config/main.php**
     ],
 ```
 
+in **frontend/config/main.php**
+
+```
+'modules' => [
+    'blog' => [
+        'as frontend' => 'hrupin\blog\filters\FrontendFilter',
+    ],
+]
+```
+
+in **backend/config/main.php**
+
+```
+'modules' => [
+    'blog' => [
+        'as backend' => 'hrupin\blog\filters\BackendFilter',
+    ],
+],
+```
+
 ### migrate
 
 ```

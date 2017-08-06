@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace hrupin\blog\models;
 
 use Yii;
 
