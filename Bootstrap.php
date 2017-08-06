@@ -12,12 +12,18 @@ class Bootstrap implements BootstrapInterface
 {
     /** @var array Model's map */
     private $_modelMap = [
-        'CategoryBlog'     => 'hrupin\blog\models\CategoryBlog',
-        'PostBlog'         => 'hrupin\blog\models\PostBlog',
-        'CommentBlog'      => 'hrupin\blog\models\CommentBlog',
-        'TagBlog'          => 'hrupin\blog\models\TagBlog',
-        'SeoBlog'          => 'hrupin\blog\models\SeoBlog',
-        'AuthorBlog'       => 'hrupin\blog\models\AuthorBlog',
+        'BlogCategory'       => 'hrupin\blog\models\CategoryBlog',
+        'BlogPost'           => 'hrupin\blog\models\PostBlog',
+        'BlogComment'        => 'hrupin\blog\models\CommentBlog',
+        'BlogTag'            => 'hrupin\blog\models\TagBlog',
+        'BlogSeo'            => 'hrupin\blog\models\SeoBlog',
+        'BlogAuthor'         => 'hrupin\blog\models\AuthorBlog',
+        'BlogCategoryQuery'  => 'hrupin\blog\models\CategoryBlogQuery',
+        'BlogPostQuery'      => 'hrupin\blog\models\PostBlogQuery',
+        'BlogCommentQuery'   => 'hrupin\blog\models\CommentBlogQuery',
+        'BlogTagQuery'       => 'hrupin\blog\models\TagBlogQuery',
+        'BlogSeoQuery'       => 'hrupin\blog\models\SeoBlogQuery',
+        'BlogAuthorQuery'    => 'hrupin\blog\models\AuthorBlogQuery',
     ];
     
     public function bootstrap($app)
