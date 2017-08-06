@@ -8,7 +8,7 @@ use yii\base\ActionFilter;
 class BackendFilter extends ActionFilter
 {
     
-    public $controllers = ['profile', 'recovery', 'registration', 'settings'];
+    public $controllers = ['category', 'post'];
   
     public function beforeAction($action)
     {
