@@ -69,6 +69,29 @@ class BlogCategory extends \yii\db\ActiveRecord
      */
     public static function find()
     {
-        return new \frontend\models\BlogCategoryQuery(get_called_class());
+        return new \hrupin\blog\models\BlogCategoryQuery(get_called_class());
     }
+
+    public function loadDefaultValues($key){
+        $this->id_category = (int)$this->find()->lastId() + 1;
+        $this->lang = $key;
+        $this->dateCreated = time();
+        $this->dateUpdated = time();
+    }
+
+    public function getIdParent(){
+        $arParent = [];
+        foreach (BlogCategory::find()->getIdDist()->all() as $value){
+            if($value->id_parent){
+                if(!array_key_exists($value->id_parent, $arParent)){
+                    $arParent[$value->id_parent] = [];
+                }
+                foreach (BlogCategory::find()->getIdParentAndLang($value->id_parent, $value->lang)->all() as $val){
+                    $arParent[$value->id_parent][$val->lang] = $val->title;
+                }
+            }
+        }
+        return $arParent;
+    }
+
 }
