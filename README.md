@@ -24,6 +24,7 @@ in **common/config/main.php**
 'modules' => [
         'blog' => [
             'class' => 'hrupin\blog\Module',
+            'lang' => ['en-US' => 'English', 'ru-RU' => 'Russian']
         ],
     ],
 ```
